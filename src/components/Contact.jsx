@@ -187,7 +187,7 @@ const Contact = () => {
 
             {/* Download CV */}
             <motion.a
-              href="images/Thasneem SE (1).pdf"
+              href="/images/Thasneem SE (1).pdf"
               download
               className="btn-primary w-fit"
               initial={{ opacity: 0, y: 20 }}

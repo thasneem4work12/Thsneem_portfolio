@@ -42,7 +42,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 via-accent-500/5 to-primary-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
             <img
-              src="images/logo.png"
+              src="/images/logo.png"
               alt="Thasneem Mohamed Logo"
               className="h-14 w-auto relative z-10 filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300"
             />

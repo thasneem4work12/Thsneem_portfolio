@@ -183,7 +183,7 @@ const About = () => {
 
               <div className="relative rounded-3xl overflow-hidden bg-white bg-opacity-80 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 shadow-[0_20px_60px_rgba(99,102,241,0.2)] dark:shadow-2xl">
                 <img
-                  src="images/about.jpg"
+                  src="/images/about.jpg"
                   alt="Thasneem Mohamed"
                   className="w-full h-auto max-h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
