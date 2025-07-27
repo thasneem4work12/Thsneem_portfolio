@@ -43,7 +43,7 @@ const Header = () => {
         {/* Background Image */}
         <div
           className="absolute inset-0 opacity-5 dark:opacity-10 bg-contain bg-right bg-no-repeat z-0 transition-opacity duration-500"
-          style={{ backgroundImage: 'url(images/background.png)' }}
+          style={{ backgroundImage: 'url(/images/background.png)' }}
         />
 
         {/* Enhanced Floating Elements */}
@@ -209,7 +209,7 @@ const Header = () => {
                   {/* Dark overlay for light mode */}
                   <div className="pointer-events-none absolute inset-0 z-10 hidden light:block" style={{background: 'linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.08))'}} />
                   <img
-                    src="images/hero-user.jpg"
+                    src="/images/hero-user.jpg"
                     alt="Thasneem Mohamed smiling in front of a wooden background"
                     className="w-full h-full object-cover background"
                   />
