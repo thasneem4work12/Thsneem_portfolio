@@ -12,52 +12,28 @@ import {
 const Experience = () => {
   const experiences = [
     {
-      title: "Frontend Developer",
-      company: "Tech Solutions Inc.",
-      location: "Remote",
-      period: "2023 - Present",
-      type: "Full-time",
-      description: "Developing responsive web applications using React and modern JavaScript frameworks. Collaborating with design teams to implement pixel-perfect UI components.",
-      achievements: [
-        "Built 5+ responsive web applications",
-        "Improved page load speed by 40%",
-        "Collaborated with 3-person development team"
-      ],
-      technologies: ["React", "JavaScript", "Tailwind CSS", "Git"],
-      icon: faCode,
-      color: "from-blue-500 to-purple-600"
+      title: "Process Associate – HCL Technologies (Pvt) Ltd",
+      company: "HCL Technologies (Pvt) Ltd",
+      location: "",
+      period: "Feb 2024 – July 2024",
+      type: "",
+      description: "I’m good at handling information accurately, following procedures, and supporting smooth operations.",
+      achievements: [],
+      technologies: [],
+      icon: faBriefcase,
+      color: "from-blue-600 to-purple-600"
     },
     {
-      title: "Web Development Intern",
-      company: "Digital Agency Pro",
-      location: "Colombo, Sri Lanka",
-      period: "2022 - 2023",
-      type: "Internship",
-      description: "Assisted in developing client websites and learned modern web development practices. Gained hands-on experience with various web technologies.",
-      achievements: [
-        "Completed 10+ client projects",
-        "Learned React and Node.js",
-        "Received excellent performance review"
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "WordPress"],
-      icon: faUsers,
-      color: "from-green-500 to-teal-600"
-    },
-    {
-      title: "Freelance Developer",
-      company: "Self-Employed",
-      location: "Sri Lanka",
-      period: "2021 - 2022",
-      type: "Freelance",
-      description: "Provided web development services to local businesses. Created custom websites and helped clients establish their online presence.",
-      achievements: [
-        "Served 15+ satisfied clients",
-        "Built e-commerce solutions",
-        "Developed strong client relationships"
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
-      icon: faRocket,
-      color: "from-purple-500 to-pink-600"
+      title: "Data Entry Operator – HTCey Leisure (Pvt) Ltd",
+      company: "HTCey Leisure (Pvt) Ltd",
+      location: "",
+      period: "April 2022 – May 2023",
+      type: "",
+      description: "I’m good at handling information accurately, following procedures, and supporting smooth operations.",
+      achievements: [],
+      technologies: [],
+      icon: faBriefcase,
+      color: "from-green-600 to-teal-600"
     }
   ]
 
@@ -92,10 +68,10 @@ const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title text-slate-900 dark:text-white mb-6">
+          <h2 className="section-title text-slate-900 dark:text-gray-100 mb-6">
             Work Experience
           </h2>
-          <p className="section-subtitle text-slate-600 dark:text-neutral-300 max-w-2xl mx-auto">
+          <p className="section-subtitle text-slate-600 dark:text-gray-200 max-w-2xl mx-auto">
             My professional journey and key accomplishments in software development
           </p>
         </motion.div>
@@ -131,13 +107,13 @@ const Experience = () => {
                           <FontAwesomeIcon icon={exp.icon} className="text-lg" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">
+                          <h3 className="text-xl font-bold text-slate-900 dark:text-gray-100 mb-1">
                             {exp.title}
                           </h3>
-                          <p className="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-2">
+                          <p className="text-lg font-semibold text-primary-600 dark:text-primary-300 mb-2">
                             {exp.company}
                           </p>
-                          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-neutral-400">
+                          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-gray-400">
                             <div className="flex items-center space-x-1">
                               <FontAwesomeIcon icon={faCalendarAlt} />
                               <span>{exp.period}</span>
@@ -154,35 +130,9 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    <p className="text-slate-600 dark:text-neutral-300 mb-6 leading-relaxed">
+                    <p className="text-slate-600 dark:text-gray-200 mb-6 leading-relaxed">
                       {exp.description}
                     </p>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-3">Key Achievements:</h4>
-                      <ul className="space-y-2">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start space-x-2 text-slate-600 dark:text-neutral-300">
-                            <span className="w-2 h-2 bg-accent-500 rounded-full mt-2 flex-shrink-0"></span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-3">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1 bg-slate-100 dark:bg-bg-tertiary text-slate-700 dark:text-neutral-300 rounded-lg text-sm font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
                   </motion.div>
                 </div>
               </motion.div>

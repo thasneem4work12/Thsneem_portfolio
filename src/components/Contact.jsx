@@ -62,10 +62,10 @@ const Contact = () => {
   ]
 
   const socialLinks = [
-    { icon: faFacebookF, url: 'https://www.facebook.com/', label: 'Facebook' },
-    { icon: faInstagram, url: 'https://www.instagram.com/', label: 'Instagram' },
-    { icon: faLinkedinIn, url: 'https://www.linkedin.com/', label: 'LinkedIn' },
-    { icon: faGithub, url: 'https://github.com/', label: 'GitHub' }
+    { icon: faFacebookF, url: 'https://www.facebook.com/share/1DCkkWrDXj/', label: 'Facebook' },
+    { icon: faInstagram, url: 'https://www.instagram.com/mr._empire_?igsh=YWk0M3dxMHE5c2tx', label: 'Instagram' },
+    { icon: faLinkedinIn, url: 'https://www.linkedin.com/in/thasneem-mohamed-466a2727a', label: 'LinkedIn' },
+    { icon: faGithub, url: 'https://github.com/thasneem4work12', label: 'GitHub' }
   ]
 
   const handleInputChange = (e) => {
@@ -187,7 +187,7 @@ const Contact = () => {
 
             {/* Download CV */}
             <motion.a
-              href="/images/122516739 Thasneem Mohamed.pdf"
+              href="images/Thasneem SE (1).pdf"
               download
               className="btn-primary w-fit"
               initial={{ opacity: 0, y: 20 }}

@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import { HashRouter } from 'react-router-dom'
 
 // Font Awesome configuration
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -19,6 +20,8 @@ document.fonts.ready.then(() => {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </StrictMode>,
 )

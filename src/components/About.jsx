@@ -98,19 +98,14 @@ const About = () => {
 
   const experience = [
     {
-      title: 'Freelance Developer',
-      period: 'Current',
-      description: 'Working on various web and mobile development projects for clients worldwide'
+      title: 'Process Associate – HCL Technologies (Pvt) Ltd',
+      period: 'Feb 2024 – July 2024',
+      description: ''
     },
     {
-      title: 'Data Entry Operator',
-      period: '2021 - 2022',
-      description: 'HTC Leisure Pvt Company - Managed data processing and administrative tasks'
-    },
-    {
-      title: 'Virtual Assistant',
-      period: '2021',
-      description: 'Provided remote administrative and technical support services'
+      title: 'Data Entry Operator – HTCey Leisure (Pvt) Ltd',
+      period: 'April 2022 – May 2023',
+      description: ''
     }
   ]
 
@@ -188,7 +183,7 @@ const About = () => {
 
               <div className="relative rounded-3xl overflow-hidden bg-white bg-opacity-80 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 shadow-[0_20px_60px_rgba(99,102,241,0.2)] dark:shadow-2xl">
                 <img
-                  src="/images/about.jpg"
+                  src="images/about.jpg"
                   alt="Thasneem Mohamed"
                   className="w-full h-auto max-h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -219,7 +214,7 @@ const About = () => {
                 My Story
               </h3>
               <p className="text-base font-medium text-slate-700 dark:text-white leading-relaxed mb-3">
-                I'm a 20-year-old software engineering student at the Open University of Colombo,
+                I'm a 22-year-old software engineering student at the Open University of Colombo,
                 passionate about software development and committed to building a successful tech career.
               </p>
               <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed">
@@ -358,6 +353,7 @@ const About = () => {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.15 }}
+                        whileHover={{ y: -3, scale: 1.01 }}
                       >
                         {/* Premium timeline dot */}
                         <div className="absolute -left-14 top-3 w-3 h-3 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full border-3 border-white dark:border-bg-primary shadow-lg group-hover:scale-125 transition-transform duration-300" />
@@ -368,14 +364,14 @@ const About = () => {
                           whileHover={{ y: -3, scale: 1.01 }}
                         >
                           <div className="flex items-start justify-between mb-3">
-                            <h4 className="text-lg font-bold text-slate-800 dark:text-white">{exp.title}</h4>
+                            <h4 className="text-lg font-bold text-slate-800 dark:text-gray-900">{exp.title}</h4>
                             <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-semibold rounded-full shadow-sm">
                               <div className="w-1.5 h-1.5 bg-white rounded-full mr-2 animate-pulse" />
                               {exp.period}
                             </span>
                           </div>
 
-                          <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed">{exp.description}</p>
+                          <p className="text-sm text-slate-600 dark:text-gray-900 leading-relaxed">{exp.description}</p>
 
                           {/* Subtle accent line */}
                           <div className="mt-4 h-0.5 w-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full opacity-60" />
@@ -408,19 +404,19 @@ const About = () => {
 
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between mb-3">
-                            <h4 className="text-lg font-bold text-slate-800 dark:text-white leading-tight">{edu.title}</h4>
+                            <h4 className="text-lg font-bold text-slate-800 dark:text-gray-900 leading-tight">{edu.title}</h4>
                             <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold rounded-full shadow-sm ml-3">
                               <div className="w-1.5 h-1.5 bg-white rounded-full mr-2" />
                               {edu.period}
                             </span>
                           </div>
 
-                          <p className="text-sm font-medium text-slate-600 dark:text-gray-300 mb-2">{edu.institution}</p>
+                          <p className="text-sm font-medium text-slate-600 dark:text-gray-900 mb-2">{edu.institution}</p>
 
                           {/* Achievement indicator */}
                           <div className="flex items-center gap-2">
                             <div className="h-0.5 w-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
-                            <span className="text-xs text-slate-500 dark:text-gray-400 font-medium">Academic Excellence</span>
+                            <span className="text-xs text-slate-500 dark:text-gray-700 font-medium">Academic Excellence</span>
                           </div>
                         </div>
                       </div>

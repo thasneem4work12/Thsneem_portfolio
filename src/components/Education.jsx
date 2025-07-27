@@ -15,11 +15,10 @@ const Education = () => {
   const education = [
     {
       degree: "Bachelor of Software Engineering",
-      institution: "University of Colombo",
+      institution: "Open University of Sri Lanka",
       location: "Colombo, Sri Lanka",
       period: "2021 - Present",
       status: "Undergraduate",
-      gpa: "3.8/4.0",
       description: "Comprehensive program covering software development, algorithms, data structures, and modern programming practices.",
       coursework: [
         "Data Structures & Algorithms",
@@ -34,11 +33,11 @@ const Education = () => {
     },
     {
       degree: "Advanced Level (A/L)",
-      institution: "Royal College",
+      institution: "D.S.Senanayake College",
       location: "Colombo, Sri Lanka",
       period: "2019 - 2021",
       status: "Completed",
-      gpa: "3 A's",
+      gpa: "3S",
       description: "Specialized in Mathematics, Physics, and Information Technology with excellent academic performance.",
       coursework: [
         "Combined Mathematics",
@@ -112,10 +111,10 @@ const Education = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title text-slate-900 dark:text-white mb-6">
+          <h2 className="section-title text-slate-900 dark:text-gray-100 mb-6">
             Education & Certifications
           </h2>
-          <p className="section-subtitle text-slate-600 dark:text-neutral-300 max-w-2xl mx-auto">
+          <p className="section-subtitle text-slate-600 dark:text-gray-200 max-w-2xl mx-auto">
             My academic background and professional certifications in software development
           </p>
         </motion.div>
@@ -129,7 +128,7 @@ const Education = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 mb-8 flex items-center">
               <FontAwesomeIcon icon={faGraduationCap} className="mr-3 text-primary-500" />
               Academic Education
             </h3>
@@ -147,13 +146,13 @@ const Education = () => {
                       <FontAwesomeIcon icon={edu.icon} className="text-xl" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                      <h4 className="text-xl font-bold text-slate-900 dark:text-gray-100 mb-2">
                         {edu.degree}
                       </h4>
-                      <p className="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-2">
+                      <p className="text-lg font-semibold text-primary-600 dark:text-primary-300 mb-2">
                         {edu.institution}
                       </p>
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-neutral-400 mb-2">
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-gray-400 mb-2">
                         <div className="flex items-center space-x-1">
                           <FontAwesomeIcon icon={faCalendarAlt} />
                           <span>{edu.period}</span>
@@ -166,21 +165,18 @@ const Education = () => {
                           {edu.status}
                         </span>
                       </div>
-                      <p className="text-sm font-semibold text-green-600 dark:text-green-400">
-                        GPA: {edu.gpa}
-                      </p>
                     </div>
                   </div>
 
-                  <p className="text-slate-600 dark:text-neutral-300 mb-6 leading-relaxed">
+                  <p className="text-slate-600 dark:text-gray-200 mb-6 leading-relaxed">
                     {edu.description}
                   </p>
 
                   <div>
-                    <h5 className="font-semibold text-slate-900 dark:text-white mb-3">Key Coursework:</h5>
+                    <h5 className="font-semibold text-slate-900 dark:text-gray-100 mb-3">Key Coursework:</h5>
                     <div className="grid grid-cols-2 gap-2">
                       {edu.coursework.map((course, courseIndex) => (
-                        <div key={courseIndex} className="flex items-center space-x-2 text-slate-600 dark:text-neutral-300">
+                        <div key={courseIndex} className="flex items-center space-x-2 text-slate-600 dark:text-gray-200">
                           <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
                           <span className="text-sm">{course}</span>
                         </div>
@@ -199,7 +195,7 @@ const Education = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 flex items-center">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 mb-8 flex items-center">
               <FontAwesomeIcon icon={faAward} className="mr-3 text-accent-500" />
               Certifications
             </h3>
@@ -218,13 +214,13 @@ const Education = () => {
                       className={`text-2xl ${cert.color} mt-1`}
                     />
                     <div className="flex-1">
-                      <h4 className="font-bold text-slate-900 dark:text-white mb-1">
+                      <h4 className="font-bold text-slate-900 dark:text-gray-100 mb-1">
                         {cert.title}
                       </h4>
-                      <p className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-1">
+                      <p className="text-sm text-primary-600 dark:text-primary-300 font-medium mb-1">
                         {cert.issuer}
                       </p>
-                      <p className="text-xs text-slate-500 dark:text-neutral-400">
+                      <p className="text-xs text-slate-500 dark:text-gray-400">
                         {cert.date}
                       </p>
                     </div>
@@ -238,10 +234,10 @@ const Education = () => {
               className="mt-8 bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 rounded-xl p-6"
               variants={itemVariants}
             >
-              <h4 className="font-bold text-slate-900 dark:text-white mb-3">
+              <h4 className="font-bold text-slate-900 dark:text-gray-100 mb-3">
                 Continuous Learning
               </h4>
-              <p className="text-sm text-slate-600 dark:text-neutral-300">
+              <p className="text-sm text-slate-600 dark:text-gray-200">
                 Always expanding my knowledge through online courses, workshops, and staying updated with the latest technologies in software development.
               </p>
             </motion.div>
