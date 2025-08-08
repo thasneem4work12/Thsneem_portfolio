@@ -76,22 +76,22 @@ const Skills = () => {
     <section id="skills" className="section-padding bg-white dark:bg-bg-secondary transition-colors duration-500">
       <div className="container-wide">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title text-slate-900 dark:text-white mb-6">
+          <h2 className="section-title text-slate-900 dark:text-white mb-4 sm:mb-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
             Technical Skills
           </h2>
-          <p className="section-subtitle text-slate-600 dark:text-neutral-300 max-w-2xl mx-auto">
+          <p className="section-subtitle text-slate-600 dark:text-neutral-300 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl xl:text-2xl">
             A comprehensive overview of my technical expertise and proficiency levels
           </p>
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -100,15 +100,15 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="bg-slate-50 dark:bg-bg-primary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-slate-50 dark:bg-bg-primary rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300"
               variants={itemVariants}
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 text-center">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-4 sm:mb-6 text-center">
                 {category.title}
               </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -119,16 +119,16 @@ const Skills = () => {
                     transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
                   >
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
+                      <div className="flex items-center space-x-2 sm:space-x-3">
                         <FontAwesomeIcon 
                           icon={skill.icon} 
-                          className={`text-lg ${skill.color}`}
+                          className={`text-base sm:text-lg ${skill.color}`}
                         />
-                        <span className="font-medium text-slate-700 dark:text-neutral-200">
+                        <span className="font-medium text-slate-700 dark:text-neutral-200 text-sm sm:text-base">
                           {skill.name}
                         </span>
                       </div>
-                      <span className="text-sm font-semibold text-slate-500 dark:text-neutral-400">
+                      <span className="text-xs sm:text-sm font-semibold text-slate-500 dark:text-neutral-400">
                         {skill.level}%
                       </span>
                     </div>

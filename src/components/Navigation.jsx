@@ -23,7 +23,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-3xl border-b shadow-[0_12px_40px_rgba(99,102,241,0.15)] ${isScrolled ? 'py-3' : 'py-4'} light:bg-[color:var(--surface-primary)] light:border-[color:var(--border-primary)] dark:bg-[color:var(--bg-primary)] dark:border-white dark:border-opacity-15 dark:shadow-[0_12px_40px_rgba(0,0,0,0.3)]`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-3xl border-b shadow-[0_12px_40px_rgba(99,102,241,0.15)] ${isScrolled ? 'py-2 sm:py-3' : 'py-3 sm:py-4'} light:bg-[color:var(--surface-primary)] light:border-[color:var(--border-primary)] dark:bg-[color:var(--bg-primary)] dark:border-white dark:border-opacity-15 dark:shadow-[0_12px_40px_rgba(0,0,0,0.3)]`}
       style={{
         background: undefined,
         transition: 'background-color 0.3s, border-color 0.3s',
@@ -32,7 +32,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           {/* Premium Logo */}
           <motion.div
@@ -44,13 +44,13 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
             <img
               src="/images/logo.png"
               alt="Thasneem Mohamed Logo"
-              className="h-14 w-auto relative z-10 filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300"
+              className="h-10 sm:h-12 lg:h-14 w-auto relative z-10 filter drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 to-accent-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </motion.div>
 
           {/* Premium Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.href}
@@ -94,7 +94,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="lg:hidden text-white text-xl p-2"
+            className="lg:hidden text-white text-xl p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
             onClick={toggleMenu}
             whileTap={{ scale: 0.95 }}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -119,7 +119,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
             
             {/* Mobile Menu */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-80 backdrop-blur-md border-l border-gray-200 bg-white bg-opacity-95 dark:border-white dark:border-opacity-10 dark:bg-opacity-0 z-50 lg:hidden"
+              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] backdrop-blur-md border-l border-gray-200 bg-white bg-opacity-95 dark:border-white dark:border-opacity-10 dark:bg-opacity-0 z-50 lg:hidden"
               style={{background: 'rgba(26, 26, 46, 0.95)'}}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -128,10 +128,10 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
             >
               <div className="flex flex-col h-full">
                 {/* Close Button */}
-                <div className="flex justify-end p-6">
+                <div className="flex justify-end p-4 sm:p-6">
                   <motion.button
                     onClick={closeMenu}
-                    className="text-white text-xl p-2"
+                    className="text-white text-xl p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     whileTap={{ scale: 0.95 }}
                     aria-label="Close menu"
                   >
@@ -140,7 +140,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
                 </div>
 
                 {/* Navigation Items */}
-                <div className="flex flex-col items-center justify-center flex-1 space-y-8">
+                <div className="flex flex-col items-center justify-center flex-1 space-y-6 sm:space-y-8 px-6">
                   {navItems.map((item, index) => (
                     <motion.a
                       key={item.href}
@@ -149,7 +149,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
                         e.preventDefault()
                         handleNavClick(item.href)
                       }}
-                      className="text-lg font-semibold transition-colors duration-300 group light:text-[color:var(--text-secondary)] dark:text-white hover:light:text-[color:var(--text-accent)] dark:hover:text-primary-400"
+                      className="text-lg sm:text-xl font-semibold transition-colors duration-300 group light:text-[color:var(--text-secondary)] dark:text-white hover:light:text-[color:var(--text-accent)] dark:hover:text-primary-400 py-2 px-4 rounded-lg hover:bg-white/10 w-full text-center"
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -165,7 +165,7 @@ const Navigation = ({ isScrolled, isMenuOpen, toggleMenu, closeMenu }) => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.7 }}
-                    className="pt-4"
+                    className="pt-4 sm:pt-6"
                   >
                     <ThemeToggle />
                   </motion.div>

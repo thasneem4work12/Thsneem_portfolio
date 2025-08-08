@@ -811,33 +811,63 @@ body {
   /* Premium Responsive Enhancements */
   @media (max-width: 768px) {
     .section-title {
-      @apply text-4xl lg:text-5xl;
+      @apply text-3xl sm:text-4xl lg:text-5xl;
     }
 
     .section-subtitle {
-      @apply text-lg lg:text-xl;
+      @apply text-base sm:text-lg lg:text-xl;
     }
 
     .container-wide {
-      @apply px-4;
+      @apply px-4 sm:px-6;
     }
 
     .section-padding {
-      @apply py-20 lg:py-24;
+      @apply py-16 sm:py-20 lg:py-24;
+    }
+
+    .btn-primary, .btn-secondary {
+      @apply px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base;
     }
   }
 
   @media (max-width: 640px) {
     .section-title {
-      @apply text-3xl;
+      @apply text-2xl sm:text-3xl;
     }
 
     .section-subtitle {
-      @apply text-base;
+      @apply text-sm sm:text-base;
     }
 
     .btn-primary, .btn-secondary {
-      @apply px-6 py-3 text-sm;
+      @apply px-4 py-2 text-sm;
+    }
+
+    .card {
+      @apply p-4 sm:p-6;
+    }
+
+    .container-wide {
+      @apply px-3 sm:px-4;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      @apply text-xl sm:text-2xl;
+    }
+
+    .section-subtitle {
+      @apply text-xs sm:text-sm;
+    }
+
+    .btn-primary, .btn-secondary {
+      @apply px-3 py-2 text-xs sm:text-sm;
+    }
+
+    .container-wide {
+      @apply px-2 sm:px-3;
     }
   }
 
@@ -1163,4 +1193,94 @@ body {
 /* Dark Mode Support (if needed) */
 @media (prefers-color-scheme: dark) {
   /* Already dark by default, but can add overrides here */
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Improve touch targets */
+  button, a, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus */
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    font-size: 16px;
+  }
+  
+  /* Better spacing for mobile */
+  .container-wide {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Improve mobile navigation */
+  .mobile-menu {
+    max-width: 85vw;
+  }
+  
+  /* Better mobile typography */
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Mobile-friendly cards */
+  .card {
+    padding: 1rem;
+  }
+  
+  /* Better mobile buttons */
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screen optimizations */
+  .container-wide {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+  
+  .card {
+    padding: 0.75rem;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices */
+  .hover-lift:hover {
+    transform: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  /* Increase touch targets */
+  .nav-link, .btn-primary, .btn-secondary {
+    min-height: 48px;
+    min-width: 48px;
+  }
 }

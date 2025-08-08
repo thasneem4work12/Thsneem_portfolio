@@ -140,9 +140,9 @@ const About = () => {
       {/* Ultra-Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Luxury gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-r from-primary-200/30 via-accent-200/20 to-purple-200/25 dark:from-primary-900 dark:to-accent-900 rounded-full opacity-40 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-accent-200/25 via-purple-200/20 to-primary-200/30 dark:from-accent-900 dark:to-primary-900 rounded-full opacity-35 blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-r from-indigo-200/20 to-pink-200/15 dark:from-indigo-900 dark:to-pink-900 rounded-full opacity-30 blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
+        <div className="absolute top-1/4 left-1/4 w-[300px] sm:w-[400px] lg:w-[600px] h-[300px] sm:h-[400px] lg:h-[600px] bg-gradient-to-r from-primary-200/30 via-accent-200/20 to-purple-200/25 dark:from-primary-900 dark:to-accent-900 rounded-full opacity-40 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[250px] sm:w-[350px] lg:w-[500px] h-[250px] sm:h-[350px] lg:h-[500px] bg-gradient-to-r from-accent-200/25 via-purple-200/20 to-primary-200/30 dark:from-accent-900 dark:to-primary-900 rounded-full opacity-35 blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] lg:w-[400px] h-[200px] sm:h-[300px] lg:h-[400px] bg-gradient-to-r from-indigo-200/20 to-pink-200/15 dark:from-indigo-900 dark:to-pink-900 rounded-full opacity-30 blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
 
         {/* Subtle texture overlay */}
         <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]"></div>
@@ -151,28 +151,28 @@ const About = () => {
       <div className="container-wide relative z-10">
         {/* Enhanced Section Header */}
         <motion.div
-          className="text-center mb-24"
+          className="text-center mb-16 sm:mb-20 lg:mb-24"
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="inline-block mb-6"
+            className="inline-block mb-4 sm:mb-6"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-[0.3em] bg-white bg-opacity-60 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl px-6 py-2 rounded-full border border-white border-opacity-40 dark:border-white dark:border-opacity-20 shadow-[0_8px_32px_rgba(99,102,241,0.15)] dark:shadow-none">
+            <span className="text-xs sm:text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-[0.3em] bg-white bg-opacity-60 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl px-4 sm:px-6 py-2 rounded-full border border-white border-opacity-40 dark:border-white dark:border-opacity-20 shadow-[0_8px_32px_rgba(99,102,241,0.15)] dark:shadow-none">
               About Me
             </span>
           </motion.div>
-          <h2 className="section-title">Crafting Digital Excellence</h2>
-          <p className="section-subtitle">Discover my journey, expertise, and passion for creating innovative solutions</p>
+          <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">Crafting Digital Excellence</h2>
+          <p className="section-subtitle text-base sm:text-lg lg:text-xl xl:text-2xl">Discover my journey, expertise, and passion for creating innovative solutions</p>
         </motion.div>
 
         {/* Image and Story Section */}
-        <div className="flex flex-col lg:flex-row gap-16 xl:gap-20 items-start mb-20">
+        <div className="flex flex-col lg:flex-row gap-12 sm:gap-16 xl:gap-20 items-start mb-16 sm:mb-20">
           {/* Compact About Image */}
           <motion.div
-            className="relative lg:w-80 xl:w-96 flex-shrink-0 mx-auto lg:mx-0"
+            className="relative lg:w-80 xl:w-96 flex-shrink-0 mx-auto lg:mx-0 w-full max-w-sm sm:max-w-md"
             initial={{ opacity: 0, x: -50 }}
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -185,12 +185,12 @@ const About = () => {
                 <img
                   src="/images/about.jpg"
                   alt="Thasneem Mohamed"
-                  className="w-full h-auto max-h-96 object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-auto max-h-80 sm:max-h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-transparent to-accent-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Floating badge */}
-                <div className="absolute top-4 right-4 bg-white bg-opacity-90 dark:bg-white dark:bg-opacity-20 backdrop-blur-xl px-3 py-1.5 rounded-full border border-white border-opacity-60 dark:border-white dark:border-opacity-30 shadow-[0_8px_32px_rgba(99,102,241,0.15)]">
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white bg-opacity-90 dark:bg-white dark:bg-opacity-20 backdrop-blur-xl px-2 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white border-opacity-60 dark:border-white dark:border-opacity-30 shadow-[0_8px_32px_rgba(99,102,241,0.15)]">
                   <span className="text-xs font-semibold text-primary-600 dark:text-primary-400">Available for Work</span>
                 </div>
               </div>
@@ -206,18 +206,18 @@ const About = () => {
           >
             {/* Enhanced About Text */}
             <motion.div
-              className="bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 rounded-2xl p-6 shadow-[0_12px_40px_rgba(99,102,241,0.1)] dark:shadow-none"
+              className="bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 rounded-2xl p-4 sm:p-6 shadow-[0_12px_40px_rgba(99,102,241,0.1)] dark:shadow-none"
               whileHover={{ scale: 1.01, y: -3 }}
               transition={{ duration: 0.3 }}
             >
-              <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-3 bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white mb-3 bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
                 My Story
               </h3>
-              <p className="text-base font-medium text-slate-700 dark:text-white leading-relaxed mb-3">
+              <p className="text-sm sm:text-base font-medium text-slate-700 dark:text-white leading-relaxed mb-3">
                 I'm a 22-year-old software engineering student at the Open University of Colombo,
                 passionate about software development and committed to building a successful tech career.
               </p>
-              <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed">
                 With a strong foundation in modern web technologies and a keen eye for design,
                 I specialize in creating user-friendly applications that solve real-world problems.
                 My journey in technology is driven by curiosity and a desire to make a positive impact
@@ -235,7 +235,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           {/* Enhanced Tab Navigation */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12">
               {[
                 { id: 'skills', icon: faCode, label: 'Skills', gradient: 'primary', animation: 'none' },
                 { id: 'experience', icon: faBriefcase, label: 'Experience', gradient: 'luxury', animation: 'none' },
@@ -244,7 +244,7 @@ const About = () => {
                 <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative flex items-center gap-2 px-4 py-3 rounded-lg font-medium text-sm transition-all duration-300 overflow-hidden group ${
+                  className={`relative flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium text-xs sm:text-sm transition-all duration-300 overflow-hidden group ${
                     activeTab === tab.id
                       ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-glow'
                       : 'glass text-neutral-300 hover:bg-white/10 hover:text-white hover:shadow-soft'
@@ -262,7 +262,7 @@ const About = () => {
                   )}
 
                   {/* Icon with enhanced styling */}
-                  <div className={`relative z-10 w-4 h-4 flex items-center justify-center ${
+                  <div className={`relative z-10 w-3 h-3 sm:w-4 sm:h-4 flex items-center justify-center ${
                     activeTab === tab.id ? 'text-white' : 'text-primary-400'
                   }`}>
                     <PremiumIcon icon={tab.icon} size="sm" gradient={tab.gradient} animation="none" />
@@ -291,7 +291,7 @@ const About = () => {
                   {skills.map((skill, index) => (
                     <motion.div
                       key={skill.title}
-                      className="relative group bg-white bg-opacity-60 dark:bg-white dark:bg-opacity-5 backdrop-blur-xl border border-white border-opacity-50 dark:border-white dark:border-opacity-10 rounded-2xl p-5 shadow-[0_8px_32px_rgba(99,102,241,0.08)] dark:shadow-none hover:shadow-[0_16px_48px_rgba(99,102,241,0.15)] transition-all duration-500"
+                      className="relative group bg-white bg-opacity-60 dark:bg-white dark:bg-opacity-5 backdrop-blur-xl border border-white border-opacity-50 dark:border-white dark:border-opacity-10 rounded-2xl p-4 sm:p-5 shadow-[0_8px_32px_rgba(99,102,241,0.08)] dark:shadow-none hover:shadow-[0_16px_48px_rgba(99,102,241,0.15)] transition-all duration-500"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -300,20 +300,20 @@ const About = () => {
                       {/* Premium gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                      <div className="relative z-10 flex items-start gap-4">
-                        <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${skill.gradient} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className="relative z-10 flex items-start gap-3 sm:gap-4">
+                        <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${skill.gradient} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                           <PremiumIcon icon={skill.icon} size="lg" gradient={skill.gradient} animation="none" />
                         </div>
 
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between mb-2">
-                            <h4 className="text-lg font-bold text-slate-800 dark:text-white truncate">{skill.title}</h4>
-                            <span className="text-primary-600 dark:text-primary-400 font-bold text-sm bg-primary-50 dark:bg-primary-900/30 px-2 py-1 rounded-full">
+                            <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-white truncate">{skill.title}</h4>
+                            <span className="text-primary-600 dark:text-primary-400 font-bold text-xs sm:text-sm bg-primary-50 dark:bg-primary-900/30 px-2 py-1 rounded-full">
                               {skill.progress}%
                             </span>
                           </div>
 
-                          <p className="text-sm text-slate-600 dark:text-gray-300 mb-3 leading-relaxed">{skill.description}</p>
+                          <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 mb-3 leading-relaxed">{skill.description}</p>
 
                           {/* Modern Progress Bar */}
                           <div className="relative">
@@ -360,18 +360,18 @@ const About = () => {
 
                         {/* Premium experience card */}
                         <motion.div
-                          className="bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-8 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-15 rounded-2xl p-6 shadow-[0_8px_32px_rgba(99,102,241,0.1)] dark:shadow-none hover:shadow-[0_16px_48px_rgba(99,102,241,0.2)] transition-all duration-500"
+                          className="bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-8 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-15 rounded-2xl p-4 sm:p-6 shadow-[0_8px_32px_rgba(99,102,241,0.1)] dark:shadow-none hover:shadow-[0_16px_48px_rgba(99,102,241,0.2)] transition-all duration-500"
                           whileHover={{ y: -3, scale: 1.01 }}
                         >
-                          <div className="flex items-start justify-between mb-3">
-                            <h4 className="text-lg font-bold text-slate-800 dark:text-gray-900">{exp.title}</h4>
-                            <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-semibold rounded-full shadow-sm">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-2">
+                            <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-gray-900">{exp.title}</h4>
+                            <span className="inline-flex items-center px-2 sm:px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-semibold rounded-full shadow-sm self-start">
                               <div className="w-1.5 h-1.5 bg-white rounded-full mr-2 animate-pulse" />
                               {exp.period}
                             </span>
                           </div>
 
-                          <p className="text-sm text-slate-600 dark:text-gray-900 leading-relaxed">{exp.description}</p>
+                          <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-900 leading-relaxed">{exp.description}</p>
 
                           {/* Subtle accent line */}
                           <div className="mt-4 h-0.5 w-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full opacity-60" />
@@ -383,11 +383,11 @@ const About = () => {
               )}
 
               {activeTab === 'education' && (
-                <div className="space-y-5">
+                <div className="space-y-4 sm:space-y-5">
                   {education.map((edu, index) => (
                     <motion.div
                       key={edu.title}
-                      className="group relative bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-8 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-15 rounded-2xl p-6 shadow-[0_8px_32px_rgba(99,102,241,0.1)] dark:shadow-none hover:shadow-[0_16px_48px_rgba(99,102,241,0.2)] transition-all duration-500"
+                      className="group relative bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-8 backdrop-blur-xl border border-white border-opacity-60 dark:border-white dark:border-opacity-15 rounded-2xl p-4 sm:p-6 shadow-[0_8px_32px_rgba(99,102,241,0.1)] dark:shadow-none hover:shadow-[0_16px_48px_rgba(99,102,241,0.2)] transition-all duration-500"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -396,22 +396,22 @@ const About = () => {
                       {/* Premium gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                      <div className="relative z-10 flex items-start gap-5">
+                      <div className="relative z-10 flex items-start gap-4 sm:gap-5">
                         {/* Premium education icon */}
-                        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-purple-500 via-purple-600 to-pink-500 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500 via-purple-600 to-pink-500 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                           <PremiumIcon icon={edu.icon} size="xl" gradient="purple" animation="none" />
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-start justify-between mb-3">
-                            <h4 className="text-lg font-bold text-slate-800 dark:text-gray-900 leading-tight">{edu.title}</h4>
-                            <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold rounded-full shadow-sm ml-3">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-2">
+                            <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-gray-900 leading-tight">{edu.title}</h4>
+                            <span className="inline-flex items-center px-2 sm:px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold rounded-full shadow-sm self-start">
                               <div className="w-1.5 h-1.5 bg-white rounded-full mr-2" />
                               {edu.period}
                             </span>
                           </div>
 
-                          <p className="text-sm font-medium text-slate-600 dark:text-gray-900 mb-2">{edu.institution}</p>
+                          <p className="text-xs sm:text-sm font-medium text-slate-600 dark:text-gray-900 mb-2">{edu.institution}</p>
 
                           {/* Achievement indicator */}
                           <div className="flex items-center gap-2">

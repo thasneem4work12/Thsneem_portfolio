@@ -3,13 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <meta name="description" content="Thasneem Mohamed - Software Engineering Undergraduate specializing in Web Development, UI/UX Design, and App Development. Professional portfolio showcasing skills and projects." />
     <meta name="keywords" content="Thasneem Mohamed, Software Engineer, Web Developer, UI/UX Designer, App Developer, Portfolio, Sri Lanka" />
     <meta name="author" content="Thasneem Mohamed" />
     <meta property="og:title" content="Thasneem Mohamed - Software Engineer Portfolio" />
     <meta property="og:description" content="Professional portfolio of Thasneem Mohamed, Software Engineering Undergraduate from Sri Lanka" />
     <meta property="og:type" content="website" />
+    
+    <!-- Mobile-specific meta tags -->
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Thasneem Portfolio" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Touch icons -->
+    <link rel="apple-touch-icon" href="/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/logo.png" />
+    
     <title>Thasneem Mohamed - Software Engineer Portfolio</title>
 
     <!-- Google Fonts with Preload -->
@@ -26,6 +39,29 @@
       }
       .name-gradient {
         color: #6366f1;
+      }
+      
+      /* Touch-friendly improvements */
+      @media (max-width: 768px) {
+        button, a, input, textarea, select {
+          min-height: 44px;
+          min-width: 44px;
+        }
+        
+        /* Prevent zoom on input focus */
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+          font-size: 16px;
+        }
+      }
+      
+      /* Smooth scrolling for all devices */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Prevent horizontal scroll */
+      body {
+        overflow-x: hidden;
       }
     </style>
   </head>

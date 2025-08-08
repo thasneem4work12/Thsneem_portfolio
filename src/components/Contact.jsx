@@ -92,40 +92,40 @@ const Contact = () => {
     <section id="contact" ref={sectionRef} className="section-padding relative bg-gradient-to-br from-white via-blue-50 to-indigo-50 dark:from-bg-secondary dark:via-bg-primary dark:to-bg-tertiary overflow-hidden">
       {/* Premium Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-gradient-to-r from-primary-200 to-accent-200 dark:from-primary-900 dark:to-accent-900 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-gradient-to-r from-accent-200 to-primary-200 dark:from-accent-900 dark:to-primary-900 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/3 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-gradient-to-r from-primary-200 to-accent-200 dark:from-primary-900 dark:to-accent-900 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-56 sm:w-64 lg:w-80 h-56 sm:h-64 lg:h-80 bg-gradient-to-r from-accent-200 to-primary-200 dark:from-accent-900 dark:to-primary-900 rounded-full opacity-20 blur-3xl"></div>
       </div>
 
       <div className="container-wide relative z-10">
         {/* Enhanced Section Header */}
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-16 sm:mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="inline-block mb-6"
+            className="inline-block mb-4 sm:mb-6"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-[0.3em] bg-white bg-opacity-60 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl px-6 py-2 rounded-full border border-white border-opacity-40 dark:border-white dark:border-opacity-20 shadow-[0_8px_32px_rgba(99,102,241,0.15)] dark:shadow-none">
+            <span className="text-xs sm:text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-[0.3em] bg-white bg-opacity-60 dark:bg-white dark:bg-opacity-10 backdrop-blur-xl px-4 sm:px-6 py-2 rounded-full border border-white border-opacity-40 dark:border-white dark:border-opacity-20 shadow-[0_8px_32px_rgba(99,102,241,0.15)] dark:shadow-none">
               Contact
             </span>
           </motion.div>
-          <h2 className="section-title">Let's Create Together</h2>
-          <p className="section-subtitle">Ready to bring your vision to life? Let's start the conversation</p>
+          <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">Let's Create Together</h2>
+          <p className="section-subtitle text-base sm:text-lg lg:text-xl xl:text-2xl">Ready to bring your vision to life? Let's start the conversation</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-20 xl:gap-24 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 xl:gap-24 items-start">
           {/* Contact Info */}
           <motion.div
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
             initial={{ opacity: 0, x: -50 }}
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Premium Contact Items */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={info.title}
@@ -136,22 +136,22 @@ const Contact = () => {
                   whileHover={{ x: 15, scale: 1.02 }}
                 >
                   {/* Premium Card */}
-                  <div className="flex gap-6 p-8 bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-10 backdrop-blur-2xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 rounded-3xl shadow-[0_12px_40px_rgba(99,102,241,0.1)] dark:shadow-2xl hover:shadow-[0_20px_60px_rgba(99,102,241,0.15)] transition-all duration-500 relative overflow-hidden">
+                  <div className="flex gap-4 sm:gap-6 p-6 sm:p-8 bg-white bg-opacity-70 dark:bg-white dark:bg-opacity-10 backdrop-blur-2xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 rounded-3xl shadow-[0_12px_40px_rgba(99,102,241,0.1)] dark:shadow-2xl hover:shadow-[0_20px_60px_rgba(99,102,241,0.15)] transition-all duration-500 relative overflow-hidden">
 
                     {/* Floating background gradient */}
                     <div className="absolute -inset-2 bg-gradient-to-r from-primary-400 to-accent-400 rounded-3xl opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500"></div>
 
                     {/* Premium Icon */}
-                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500 rounded-2xl flex items-center justify-center text-white text-2xl shadow-[0_8px_32px_rgba(99,102,241,0.3)] group-hover:shadow-[0_12px_40px_rgba(99,102,241,0.4)] transition-all duration-500 relative z-10">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500 rounded-2xl flex items-center justify-center text-white text-lg sm:text-2xl shadow-[0_8px_32px_rgba(99,102,241,0.3)] group-hover:shadow-[0_12px_40px_rgba(99,102,241,0.4)] transition-all duration-500 relative z-10">
                       <FontAwesomeIcon icon={info.icon} />
                     </div>
 
                     {/* Content */}
                     <div className="relative z-10">
-                      <h4 className="text-xl font-bold text-slate-800 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                      <h4 className="text-lg sm:text-xl font-bold text-slate-800 dark:text-white mb-2 sm:mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                         {info.title}
                       </h4>
-                      <p className="text-slate-600 dark:text-gray-300 leading-relaxed">
+                      <p className="text-sm sm:text-base text-slate-600 dark:text-gray-300 leading-relaxed">
                         {info.content}
                       </p>
                     </div>
@@ -166,20 +166,20 @@ const Contact = () => {
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
-              <div className="flex gap-4 mb-6">
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Follow Me</h4>
+              <div className="flex gap-3 sm:gap-4 mb-4 sm:mb-6">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.label}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-full text-gray-300 hover:bg-primary-500 hover:text-white transition-all duration-300"
+                    className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-full text-gray-300 hover:bg-primary-500 hover:text-white transition-all duration-300"
                     whileHover={{ y: -5, scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     aria-label={social.label}
                   >
-                    <FontAwesomeIcon icon={social.icon} />
+                    <FontAwesomeIcon icon={social.icon} className="text-sm sm:text-base" />
                   </motion.a>
                 ))}
               </div>
@@ -189,7 +189,7 @@ const Contact = () => {
             <motion.a
               href="/images/Thasneem SE (1).pdf"
               download
-              className="btn-primary w-fit"
+              className="btn-primary w-fit text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1 }}
@@ -211,18 +211,18 @@ const Contact = () => {
             {/* Floating background elements */}
             <div className="absolute -inset-4 bg-gradient-to-r from-primary-400 to-accent-400 rounded-3xl opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
 
-            <div className="relative bg-white bg-opacity-80 dark:bg-white dark:bg-opacity-10 backdrop-blur-2xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 rounded-3xl p-10 lg:p-12 shadow-[0_20px_60px_rgba(99,102,241,0.15)] dark:shadow-2xl">
-              <div className="mb-8">
-                <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 dark:text-white mb-4 bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
+            <div className="relative bg-white bg-opacity-80 dark:bg-white dark:bg-opacity-10 backdrop-blur-2xl border border-white border-opacity-60 dark:border-white dark:border-opacity-20 rounded-3xl p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[0_20px_60px_rgba(99,102,241,0.15)] dark:shadow-2xl">
+              <div className="mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800 dark:text-white mb-3 sm:mb-4 bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
                   Send a Message
                 </h3>
-                <p className="text-slate-600 dark:text-gray-300">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-gray-300">
                   Ready to start your project? Fill out the form below and I'll get back to you within 24 hours.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <input
                       type="text"
@@ -231,7 +231,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Your Name"
                       required
-                      className="form-input"
+                      className="form-input text-sm sm:text-base"
                     />
                   </div>
                   <div>
@@ -242,7 +242,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Your Email"
                       required
-                      className="form-input"
+                      className="form-input text-sm sm:text-base"
                     />
                   </div>
                 </div>
@@ -255,7 +255,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="Subject"
                     required
-                    className="form-input"
+                    className="form-input text-sm sm:text-base"
                   />
                 </div>
 
@@ -265,16 +265,16 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Your Message"
-                    rows="6"
+                    rows="5"
                     required
-                    className="form-input resize-vertical"
+                    className="form-input resize-vertical text-sm sm:text-base"
                   ></textarea>
                 </div>
 
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`btn-primary w-full justify-center relative overflow-hidden ${
+                  className={`btn-primary w-full justify-center relative overflow-hidden text-sm sm:text-base px-4 sm:px-6 py-3 sm:py-4 ${
                     isSubmitting ? 'opacity-80 cursor-not-allowed' : ''
                   }`}
                   whileHover={!isSubmitting ? {
@@ -293,14 +293,14 @@ const Contact = () => {
                   }}
                 >
                   <motion.div
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2 sm:gap-3"
                     animate={isSubmitting ? { x: [0, 5, 0] } : {}}
                     transition={{ duration: 0.5, repeat: isSubmitting ? Infinity : 0 }}
                   >
                     {isSubmitting ? (
                       <>
                         <motion.div
-                          className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
+                          className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/30 border-t-white rounded-full"
                           animate={{ rotate: 360 }}
                           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                         />
@@ -312,7 +312,7 @@ const Contact = () => {
                           whileHover={{ x: 3, rotate: 15 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <FontAwesomeIcon icon={faPaperPlane} className="text-lg" />
+                          <FontAwesomeIcon icon={faPaperPlane} className="text-base sm:text-lg" />
                         </motion.div>
                         <span className="font-semibold">Send Message</span>
                       </>

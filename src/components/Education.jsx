@@ -105,21 +105,21 @@ const Education = () => {
     <section id="education" className="section-padding bg-white dark:bg-bg-secondary transition-colors duration-500">
       <div className="container-wide">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title text-slate-900 dark:text-gray-100 mb-6">
+          <h2 className="section-title text-slate-900 dark:text-gray-100 mb-4 sm:mb-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
             Education & Certifications
           </h2>
-          <p className="section-subtitle text-slate-600 dark:text-gray-200 max-w-2xl mx-auto">
+          <p className="section-subtitle text-slate-600 dark:text-gray-200 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl xl:text-2xl">
             My academic background and professional certifications in software development
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Education Section */}
           <motion.div
             className="lg:col-span-2"
@@ -128,31 +128,31 @@ const Education = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 mb-8 flex items-center">
-              <FontAwesomeIcon icon={faGraduationCap} className="mr-3 text-primary-500" />
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-gray-100 mb-6 sm:mb-8 flex items-center">
+              <FontAwesomeIcon icon={faGraduationCap} className="mr-2 sm:mr-3 text-primary-500" />
               Academic Education
             </h3>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {education.map((edu, index) => (
                 <motion.div
                   key={index}
-                  className="bg-slate-50 dark:bg-bg-primary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-slate-50 dark:bg-bg-primary rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                   variants={itemVariants}
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${edu.color} flex items-center justify-center text-white shadow-lg`}>
-                      <FontAwesomeIcon icon={edu.icon} className="text-xl" />
+                  <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-r ${edu.color} flex items-center justify-center text-white shadow-lg flex-shrink-0`}>
+                      <FontAwesomeIcon icon={edu.icon} className="text-lg sm:text-xl" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-bold text-slate-900 dark:text-gray-100 mb-2">
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-gray-100 mb-2">
                         {edu.degree}
                       </h4>
-                      <p className="text-lg font-semibold text-primary-600 dark:text-primary-300 mb-2">
+                      <p className="text-base sm:text-lg font-semibold text-primary-600 dark:text-primary-300 mb-2">
                         {edu.institution}
                       </p>
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 dark:text-gray-400 mb-2">
+                      <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs sm:text-sm text-slate-500 dark:text-gray-400 mb-2">
                         <div className="flex items-center space-x-1">
                           <FontAwesomeIcon icon={faCalendarAlt} />
                           <span>{edu.period}</span>
@@ -161,24 +161,24 @@ const Education = () => {
                           <FontAwesomeIcon icon={faMapMarkerAlt} />
                           <span>{edu.location}</span>
                         </div>
-                        <span className="px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-700 dark:text-accent-300 rounded-full text-xs font-medium">
+                        <span className="px-2 sm:px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-700 dark:text-accent-300 rounded-full text-xs font-medium">
                           {edu.status}
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-slate-600 dark:text-gray-200 mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-gray-200 mb-4 sm:mb-6 leading-relaxed">
                     {edu.description}
                   </p>
 
                   <div>
-                    <h5 className="font-semibold text-slate-900 dark:text-gray-100 mb-3">Key Coursework:</h5>
-                    <div className="grid grid-cols-2 gap-2">
+                    <h5 className="font-semibold text-slate-900 dark:text-gray-100 mb-3 text-sm sm:text-base">Key Coursework:</h5>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {edu.coursework.map((course, courseIndex) => (
                         <div key={courseIndex} className="flex items-center space-x-2 text-slate-600 dark:text-gray-200">
                           <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
-                          <span className="text-sm">{course}</span>
+                          <span className="text-xs sm:text-sm">{course}</span>
                         </div>
                       ))}
                     </div>
@@ -195,29 +195,29 @@ const Education = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 mb-8 flex items-center">
-              <FontAwesomeIcon icon={faAward} className="mr-3 text-accent-500" />
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-gray-100 mb-6 sm:mb-8 flex items-center">
+              <FontAwesomeIcon icon={faAward} className="mr-2 sm:mr-3 text-accent-500" />
               Certifications
             </h3>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
-                  className="bg-slate-50 dark:bg-bg-primary rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
+                  className="bg-slate-50 dark:bg-bg-primary rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300"
                   variants={itemVariants}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
                     <FontAwesomeIcon 
                       icon={cert.icon} 
-                      className={`text-2xl ${cert.color} mt-1`}
+                      className={`text-xl sm:text-2xl ${cert.color} mt-1 flex-shrink-0`}
                     />
-                    <div className="flex-1">
-                      <h4 className="font-bold text-slate-900 dark:text-gray-100 mb-1">
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-bold text-slate-900 dark:text-gray-100 mb-1 text-sm sm:text-base">
                         {cert.title}
                       </h4>
-                      <p className="text-sm text-primary-600 dark:text-primary-300 font-medium mb-1">
+                      <p className="text-xs sm:text-sm text-primary-600 dark:text-primary-300 font-medium mb-1">
                         {cert.issuer}
                       </p>
                       <p className="text-xs text-slate-500 dark:text-gray-400">
@@ -231,13 +231,13 @@ const Education = () => {
 
             {/* Additional Info */}
             <motion.div
-              className="mt-8 bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 rounded-xl p-6"
+              className="mt-6 sm:mt-8 bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 rounded-xl p-4 sm:p-6"
               variants={itemVariants}
             >
-              <h4 className="font-bold text-slate-900 dark:text-gray-100 mb-3">
+              <h4 className="font-bold text-slate-900 dark:text-gray-100 mb-2 sm:mb-3 text-sm sm:text-base">
                 Continuous Learning
               </h4>
-              <p className="text-sm text-slate-600 dark:text-gray-200">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-200">
                 Always expanding my knowledge through online courses, workshops, and staying updated with the latest technologies in software development.
               </p>
             </motion.div>
